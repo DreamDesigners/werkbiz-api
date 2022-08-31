@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-2@u26ipq)w3o5d5ynw5_a-ha&8z3szti4y^l_%os9yd)ldcl_e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG") == 1
 
-ALLOWED_HOSTS = ['43.205.145.135','app.werkbiz.com']
+ALLOWED_HOSTS = ['43.205.145.135','app.werkbiz.com', '127.0.0.1']
 
 
 # Application definition
@@ -149,3 +149,10 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://werkbiz.com",
+]
